@@ -1,9 +1,8 @@
 define([
     'jquery',
     'underscore',
-    'backbone',
-    'gman'
-], function($, _, Backbone, GMan) {
+    'backbone'
+], function($, _, Backbone) {
     var HomeView = Backbone.View.extend({
         el: $('#main'),
 
