@@ -1,5 +1,6 @@
 require.config({
     paths: {
+        async: 'vendor/require.async',
         jquery: 'vendor/jquery-1.10.1.min',
         underscore: 'vendor/underscore-min',
         backbone: 'vendor/backbone-min',
