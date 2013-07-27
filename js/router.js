@@ -1,8 +1,9 @@
 define([
     'jquery',
     'backbone',
+    'views/header',
     'views/home'
-], function($, Backbone, HomeView) {
+], function($, Backbone, HeaderView, HomeView) {
     var AppRouter = Backbone.Router.extend({
         routes: {
             '': 'showHome', // main route
@@ -20,6 +21,7 @@ define([
 
     var initialize = function() {
         var router = new AppRouter();
+        var header = new HeaderView();
         Backbone.history.start();
     };
 
