@@ -4,7 +4,7 @@ define([
     'backbone'
 ], function($, _, Backbone) {
     var HomeView = Backbone.View.extend({
-        el: $('body'),
+        el: $('#main'),
 
         initialize: function() {
             _.bindAll(this, 'render');
