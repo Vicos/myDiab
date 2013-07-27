@@ -7,19 +7,12 @@ define([
     var HomeView = Backbone.View.extend({
         el: $('#main'),
 
-        events: {
-            "click #login": "login"
-        },
-
         initialize: function() {
             _.bindAll(this, 'render');
+            this.render();
         },
-
         render: function() {
-            $(this.el).append('<button id="login">Login</button>');
-        },
-        login: function(event) {
-            GMan.auth();
+            $(this.el).append('<div>Hello World!</div>');
         }
     });
 

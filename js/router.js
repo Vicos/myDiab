@@ -12,7 +12,6 @@ define([
 
         showHome: function() {
             var homeView = new HomeView();
-            homeView.render();
         },
         otherRoute: function(path) {
             console.log('no route:', path);
