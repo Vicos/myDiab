@@ -1,8 +1,9 @@
 define([
     'jquery',
     'underscore',
-    'backbone'
-], function($, _, Backbone) {
+    'backbone',
+    'text!templates/home.html'
+], function($, _, Backbone, HomeTemplate) {
     var HomeView = Backbone.View.extend({
         el: $('#main'),
 
@@ -11,7 +12,8 @@ define([
             this.render();
         },
         render: function() {
-            $(this.el).append('<div>Hello World!</div>');
+            var content = _.template(HomeTemplate, {});
+            $(this.el).html(content);
         }
     });
 
