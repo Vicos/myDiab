@@ -10,7 +10,7 @@ define([
             'apiKey': 'AIzaSyDJYiFUY-Bib0a0GxJFcsw8JKHe22OgkN0',
             'scopes': 'https://www.googleapis.com/auth/fusiontables https://www.googleapis.com/auth/fusiontables.readonly',
             'isAuth': false,
-            'fusionTables': gapi.client.fusiontables
+            'fusionTables': null
         },
         auth: function() {
             var self = this;
@@ -20,10 +20,12 @@ define([
             }, function(result) {
                 if (result && !result.error) {
                     console.log('Gman: auth successfully');
+                    self.set({'fusionTables': gapi.client.fusiontables});
                     self.set({'isAuth': true});
                 }
                 else {
                     console.error('Gman: auth failed');
+                    self.set({'fusionTables': null});
                     self.set({'isAuth': false});
                 }
             });

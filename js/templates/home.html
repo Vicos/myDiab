@@ -2,3 +2,11 @@
     <h1>myDiab</h1>
     <p>Glucose tracker for diabetics</p>
 </div>
+
+<ul>
+    <% _.each(tables, function(table) { %>
+        <li>
+            <a><%- table.get('name') %></a>
+        </li>
+    <% }); %>
+</ul>
