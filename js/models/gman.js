@@ -35,5 +35,7 @@ define([
     gapi.client.load('fusiontables', 'v1');
     gapi.auth.init();
 
-    return GMan;
+    // singleton
+    var instance = new GMan();
+    return function() { return instance; };
 });
